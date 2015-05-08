@@ -7,7 +7,19 @@ var SongModel = Backbone.Model.extend({
     this.trigger('play', this);
   },
   enqueue: function(){
-    this.trigger('queue', this);
+    this.trigger('enqueue', this);
+  
+  },
+  dequeue: function(){
+  	console.log('dequed MUTHA')
+  	this.trigger('dequeue',this)
+
+  },
+  ended: function(){
+  	this.trigger('ended',this)
+
+
   }
+
 
 });
